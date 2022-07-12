@@ -7,6 +7,7 @@
     "ngrok": "npx ngrok http 3000",
     "clean": "rimraf dist/*",
     "build": "serverless package",
+    "deploy": "serverless deploy --stage prod",
     "dev": "serverless offline start",
     "db:migrate": "serverless dynamodb migrate",
     "start": "npm-run-all clean dev",

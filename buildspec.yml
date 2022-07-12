@@ -1,15 +1,15 @@
 version: 0.2
 
-#env:
+env:
   #variables:
      # key: "value"
      # key: "value"
   #parameter-store:
      # key: "value"
      # key: "value"
-  #secrets-manager:
-     # key: secret-id:json-key:version-stage:version-id
-     # key: secret-id:json-key:version-stage:version-id
+  secrets-manager:
+     BOT_TOKEN: PollyBot:BOT_TOKEN
+     CLIENT_SIGNING_SECRET: PollyBot:CLIENT_SIGNING_SECRET
   #exported-variables:
      # - variable
      # - variable
@@ -22,7 +22,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - npx sls deploy --stage prod
+      - npm ci
     #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
     #runtime-versions:
@@ -37,7 +37,7 @@ phases:
       # - command
   build:
     commands:
-      - npm ci
+      - npm run deploy
       # - command
       # - command
   #post_build:
