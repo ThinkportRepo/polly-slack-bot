@@ -8,8 +8,8 @@ env:
      # key: "value"
      # key: "value"
   secrets-manager:
-     BOT_TOKEN: PollyBot:BOT_TOKEN
-     CLIENT_SIGNING_SECRET: PollyBot:CLIENT_SIGNING_SECRET
+     BOT_TOKEN: PollyBotCreds:BOT_TOKEN
+     CLIENT_SIGNING_SECRET: PollyBotCreds:CLIENT_SIGNING_SECRET
   #exported-variables:
      # - variable
      # - variable
