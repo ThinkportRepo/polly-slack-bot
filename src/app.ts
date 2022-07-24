@@ -22,7 +22,6 @@ class PollyBot {
       signingSecret: process.env.CLIENT_SIGNING_SECRET,
     });
     this.dynamoDB = dynamoClient;
-    console.log(process.env.BOT_TOKEN, process.env.CLIENT_SIGNING_SECRET)
     this.app = new App({
       token: process.env.BOT_TOKEN,
       receiver: this.awsLambdaReceiver,
@@ -54,6 +53,7 @@ export const pollyApp = new PollyBot();
 // Handle the Lambda function event
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 module.exports.handler = async (event: AwsEvent, context: unknown, callback: AwsCallback) => {
+  console.log("CREDS", process.env.BOT_TOKEN, process.env.CLIENT_SIGNING_SECRET);
   const handler = await pollyApp.awsLambdaReceiver.start();
   return handler(event, context, callback);
 };
