@@ -22,6 +22,7 @@ class PollyBot {
       signingSecret: process.env.CLIENT_SIGNING_SECRET,
     });
     this.dynamoDB = dynamoClient;
+    console.log(process.env.BOT_TOKEN, process.env.CLIENT_SIGNING_SECRET)
     this.app = new App({
       token: process.env.BOT_TOKEN,
       receiver: this.awsLambdaReceiver,
