@@ -78,5 +78,4 @@ Afterwards the Bot can be started with `npm start`. It's required to setup some 
 This bot was largely inspired by the [openpollslack](https://gitlab.com/openpollslack/openpollslack) build
 by [@KazuAlex](https://github.com/KazuAlex).
 
-The logo was kindly provided by [@luisalisanne](https://github.com/luisalisanne).
-
+The logo was kindly provided by [@luisalisanne](https://github.com/luisalisanne) :-) 
