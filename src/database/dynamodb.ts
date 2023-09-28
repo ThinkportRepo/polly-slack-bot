@@ -47,6 +47,7 @@ export class DynamoClient {
         Choices: choices,
         Closed: false,
         ParentId: parentId,
+        CreatedAt: Date.now(),
       },
     };
 
