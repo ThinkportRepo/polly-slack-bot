@@ -31,7 +31,7 @@ export class DynamoClient {
    * @param parentId
    */
 
-  function formatDateToCustomFormat(date: Date): string {
+  public async formatDateToCustomFormat(date: Date): string {
     const dd = String(date.getDate()).padStart(2, '0');
     const mm = String(date.getMonth() + 1).padStart(2, '0'); // Monate sind von 0 bis 11
     const yyyy = date.getFullYear();
